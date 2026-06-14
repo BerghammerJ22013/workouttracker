@@ -170,20 +170,20 @@
 						<!-- Set rows -->
 						<div class="px-3 pb-3 space-y-2">
 							<!-- Column labels -->
-							<div class="flex items-center gap-2 px-1">
-								<span class="w-6 shrink-0"></span>
-								<span class="w-10 shrink-0 text-center text-xs text-slate-600">AW</span>
+							<div class="flex items-center gap-1.5 px-1">
+								<span class="w-5 shrink-0"></span>
+								<span class="w-9 shrink-0 text-center text-xs text-slate-600">AW</span>
 								<span class="flex-1 text-center text-xs text-slate-600">{ex?.unit ?? 'kg'}</span>
 								<span class="flex-1 text-center text-xs text-slate-600">Wdh.</span>
-								<span class="w-8 shrink-0"></span>
+								<span class="w-7 shrink-0"></span>
 							</div>
 
 							{#each entry.sets as set, si}
-								<div class="flex items-center gap-2">
-									<span class="w-6 shrink-0 text-center text-xs font-medium text-slate-600">{si + 1}</span>
+								<div class="flex items-center gap-1.5">
+									<span class="w-5 shrink-0 text-center text-xs font-medium text-slate-600">{si + 1}</span>
 									<button
 										onclick={() => (set.isWarmup = !set.isWarmup)}
-										class="w-10 shrink-0 rounded-lg py-2.5 text-xs font-bold transition-colors
+										class="w-9 shrink-0 rounded-lg py-2.5 text-xs font-bold transition-colors
 											{set.isWarmup ? 'bg-amber-500/20 text-amber-400 ring-1 ring-amber-500/30' : 'bg-slate-800 text-slate-600 ring-1 ring-slate-700'}"
 									>
 										AW
@@ -193,18 +193,18 @@
 										bind:value={set.weight}
 										inputmode="decimal"
 										placeholder="0"
-										class="flex-1 rounded-xl bg-slate-800 py-2.5 text-center text-base font-bold text-white outline-none ring-1 ring-slate-700 focus:ring-indigo-500"
+										class="min-w-0 flex-1 rounded-xl bg-slate-800 py-2.5 text-center text-base font-bold text-white outline-none ring-1 ring-slate-700 focus:ring-indigo-500"
 									/>
 									<input
 										type="number"
 										bind:value={set.reps}
 										inputmode="numeric"
 										placeholder="0"
-										class="flex-1 rounded-xl bg-slate-800 py-2.5 text-center text-base font-bold text-white outline-none ring-1 ring-slate-700 focus:ring-indigo-500"
+										class="min-w-0 flex-1 rounded-xl bg-slate-800 py-2.5 text-center text-base font-bold text-white outline-none ring-1 ring-slate-700 focus:ring-indigo-500"
 									/>
 									<button
 										onclick={() => removeSet(ei, si)}
-										class="w-8 shrink-0 rounded-lg py-2.5 text-slate-700 active:bg-red-950 active:text-red-400"
+										class="w-7 shrink-0 rounded-lg py-2.5 text-slate-700 active:bg-red-950 active:text-red-400"
 									>
 										<svg class="mx-auto h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
 											<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
